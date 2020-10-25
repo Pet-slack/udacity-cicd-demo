@@ -1,6 +1,6 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+**<TODO: complete this with an overview of your project>**
 
 ## Project Plan
 <TODO: Project Plan
