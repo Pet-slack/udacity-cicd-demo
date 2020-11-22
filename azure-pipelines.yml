@@ -85,10 +85,8 @@ stages:
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
 
-        deploy:
-          displayName: deploy-dev
-          steps:
           - task: AzureRmWebAppDeployment@4
+            displayName: 'Deploy Azure Web App DEV : ml-webapp-001'
             inputs:
               ConnectionType: 'AzureRM'
               azureSubscription: 'myUdacitySP_Conn'
