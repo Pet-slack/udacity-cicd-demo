@@ -85,15 +85,15 @@ stages:
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
 
-          - task: AzureRmWebAppDeployment@4
-            displayName: 'Deploy Azure Web App DEV : ml-webapp-001'
-            inputs:
-              ConnectionType: 'AzureRM'
-              azureSubscription: 'myUdacitySP_Conn'
-              appType: 'webAppLinux'
-              WebAppName: 'ml-webapp-001'
-              deployToSlotOrASE: true
-              ResourceGroupName: 'udacity-demo-rg'
-              SlotName: 'Dev'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-              RuntimeStack: 'PYTHON|3.6'
+#          - task: AzureRmWebAppDeployment@4
+#            displayName: 'Deploy Azure Web App DEV : ml-webapp-001'
+#            inputs:
+#              ConnectionType: 'AzureRM'
+#              azureSubscription: 'myUdacitySP_Conn'
+#              appType: 'webAppLinux'
+#              WebAppName: 'ml-webapp-001'
+#              deployToSlotOrASE: true
+#              ResourceGroupName: 'udacity-demo-rg'
+#              SlotName: 'Dev'
+#              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+#              RuntimeStack: 'PYTHON|3.6'
