@@ -85,7 +85,8 @@ stages:
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
 
-        deploy-dev:
+        deploy:
+          displayName: deploy-dev
           steps:
           - task: AzureRmWebAppDeployment@4
             inputs:
