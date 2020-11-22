@@ -84,3 +84,17 @@ stages:
               azureSubscription: 'myUdacitySP_Conn'
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+
+        deploy-dev:
+          steps:
+          - task: AzureRmWebAppDeployment@4
+            inputs:
+              ConnectionType: 'AzureRM'
+              azureSubscription: 'myUdacitySP_Conn'
+              appType: 'webAppLinux'
+              WebAppName: 'ml-webapp-001'
+              deployToSlotOrASE: true
+              ResourceGroupName: 'udacity-demo-rg'
+              SlotName: 'Dev'
+              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+              RuntimeStack: 'PYTHON|3.6'
