@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: '65999331-f77f-4a9c-9cf2-4583857fc4cd'
+  # azureServiceConnectionId: '65999331-f77f-4a9c-9cf2-4583857fc4cd'
   
   # Web app name
   webAppName: 'ml-webapp-001'
@@ -80,6 +80,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : ml-webapp-001'
             inputs:
-              azureSubscription: $(azureServiceConnectionId)
+              azureSubscription: 'myUdacitySP_Conn'
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
