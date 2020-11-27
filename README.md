@@ -42,7 +42,7 @@ Port: 443
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+- Add multiple stages
 
 ## Demo 
 
