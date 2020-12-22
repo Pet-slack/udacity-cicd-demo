@@ -9,7 +9,7 @@
 This project is designed to be deployed at [MS Azure App Services](https://azure.microsoft.com/en-us/services/app-service/), using DevOps CI/CD pipelines
 
 * A link to a Trello board for the project [ML WebApp Project Board](https://trello.com/b/cdOSQmny/ml-webapp)
-* A link to Project Plan spreadsheet: [ML WebApp Project Plan](https://docs.google.com/spreadsheets/d/1n43xnL9KeBi6VD-NJldy7YswKPCqkVuneJCUcn6Bw_Q)
+* A link to Project Plan spreadsheet: [ML WebApp Project Plan](https://docs.google.com/spreadsheets/d/e/2PACX-1vThMVRtmqnomIMx9dbyobfeJKYsNHfqQLVjWobfowPxQxgoFjNGFPEpxv1R5dBisSXbPx0u2alX66pF/pubhtml)
 
 ## Getting Started
 
