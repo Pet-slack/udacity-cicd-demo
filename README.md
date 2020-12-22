@@ -75,13 +75,14 @@ az webapp up --name <APP_NAME> --sku F1 --location <LOCATION> --resource-group <
 ```
 ![Az Initial Setup](images/Az_CICD_deploy.png)
 
-2. Setup and deploy CI/CD
+2. Setup and deploy CI/CD 💪
 - Log in at **Azure DevOps** and setup a new project using this Github Repo as source
-- Set up a Service Connection for your project called **myUdacitySP_Conn**
+- Create a Project: **New Project >> Go to Pipelines: Create Pipeline >> Select Project Repository >> Save**
+- Set up a new automatic Service Connection called **myUdacitySP_Conn** in **Project Settings >> Service Connections >> Azure Resource Manager**
 - Deploy the *DevOps project* to *Azure App Service* running the CI/CD pipeline
 <p class="lead">✔️ &nbsp; Run Pipeline: Go to Project >> Pipelines >> Pipelines >> Click on <em>Pet-slack.udacity-cicd-demo</em> >> Click on <em>Run pipeline</em></p>
 
-3. Check the CI/CD deployment
+3. Check the CI/CD deployment 💙
 
 ![Az CICD Deploy](images/Az_CICD_deploy2.png)
 
@@ -104,8 +105,13 @@ az webapp log tail --name <APP_NAME> --resource-group <RESOURCE_GROUP>
 
 Run the following commands to fully deploy this project at MS Azure.
 ```bash
-https://raw.githubusercontent.com/Pet-slack/udacity-cicd-demo/master/scripts/full-deploy-commands.sh start
-https://raw.githubusercontent.com/Pet-slack/udacity-cicd-demo/master/scripts/full-deploy-commands.sh deploy
+curl -s https://raw.githubusercontent.com/Pet-slack/udacity-cicd-demo/master/scripts/full-deploy-commands.sh | bash -s -- start
+curl -s https://raw.githubusercontent.com/Pet-slack/udacity-cicd-demo/master/scripts/full-deploy-commands.sh | bash -s -- deploy
+```
+
+Run the following command to delete the Azure App Service.
+```bash
+curl -s https://raw.githubusercontent.com/Pet-slack/udacity-cicd-demo/master/scripts/full-deploy-commands.sh | bash -s -- delete
 ```
 
 ## Load Testing
@@ -113,6 +119,8 @@ https://raw.githubusercontent.com/Pet-slack/udacity-cicd-demo/master/scripts/ful
 **Locust load testing output for Azure App Service**
 
 ![Locust](images/locust_test.png)
+
+Locust Test based on **scripts/locustfile.py**
 
 ## Enhancements
 
